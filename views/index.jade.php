@@ -1,7 +1,7 @@
 !!! 5
 html(xmlns="http://www.w3.org/1999/xhtml", xmlns:og="http://ogp.me/ns#", xmlns:fb="http://www.facebook.com/2008/fbml")
   head
-    title WordPress Release History
+    title= title
     link(rel='stylesheet', href='/bootstrap/css/bootstrap.min.css')
     link(rel='stylesheet', href='/css/application.css')
     script(src='//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js', type='text/javascript')

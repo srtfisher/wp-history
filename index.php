@@ -28,8 +28,16 @@ $app->get('/', function() {
 	echo $j->render(WP_HISTORY_BASE.'/views/index.jade.php');
 });
 
+// Download a version
+$app->get('/:version/download', function($version) {
+	die('download');
+});
+
+// View a version
 $app->get('/:version', function($version) {
-	var_dump($version);
+	$j = new Jade\Jade();
+	$title = 'TITLEEE';
+	echo $j->render(WP_HISTORY_BASE.'/views/v.jade.php');
 });
 
 $app->run();
