@@ -15,6 +15,7 @@ if (! file_exists('vendor/autoload.php'))
 require 'vendor/autoload.php';
 
 define('WP_HISTORY_BASE', __DIR__);
+require WP_HISTORY_BASE.'/wphistory/Dotorg.php';
 
 // LESS -> CSS
 $less = new lessc;
@@ -26,6 +27,10 @@ $app->get('/', function() {
 	$j = new Jade\Jade();
 	$title = 'TITLEEE';
 	echo $j->render(WP_HISTORY_BASE.'/views/index.jade.php');
+});
+
+$app->get('/current', function() use($app) {
+	var_dump(wphistory\Dotorg::retrieveCurrentVersion());
 });
 
 // Download a version
