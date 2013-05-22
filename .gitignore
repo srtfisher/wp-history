@@ -1,0 +1,4 @@
+# Ignore some key things
+archive/
+composer.lock
+vendor/

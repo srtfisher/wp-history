@@ -1,0 +1,6 @@
+{
+	"require": {
+		"dz0ny/jade.php": "dev-master",
+		"slim/slim": "2.*"
+	} 
+}
