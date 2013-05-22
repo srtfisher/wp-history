@@ -1,6 +1,7 @@
 {
 	"require": {
 		"dz0ny/jade.php": "dev-master",
-		"slim/slim": "2.*"
+		"slim/slim": "2.*",
+		"leafo/lessphp": "0.3.9"
 	} 
 }

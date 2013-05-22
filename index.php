@@ -16,9 +16,20 @@ require 'vendor/autoload.php';
 
 define('WP_HISTORY_BASE', __DIR__);
 
+// LESS -> CSS
+$less = new lessc;
+$less->checkedCompile(WP_HISTORY_BASE.'/less/application.less', WP_HISTORY_BASE.'/css/application.css');
+
 // Application Start
 $app = new \Slim\Slim();
-$app->get('/hello/:name', function ($name) {
-    echo "Hello, $name";
+$app->get('/', function() {
+	$j = new Jade\Jade();
+	$title = 'TITLEEE';
+	echo $j->render(WP_HISTORY_BASE.'/views/index.jade.php');
 });
+
+$app->get('/:version', function($version) {
+	var_dump($version);
+});
+
 $app->run();
