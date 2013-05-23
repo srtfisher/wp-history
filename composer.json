@@ -3,7 +3,6 @@
 		"dz0ny/jade.php": "dev-master",
 		"slim/slim": "2.*",
 		"leafo/lessphp": "0.3.9",
-		"kriswallsmith/buzz": "v0.9",
-		"symfony/class-loader": "2.2.x"
+		"kriswallsmith/buzz": "v0.9"
 	} 
 }

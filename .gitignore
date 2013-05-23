@@ -1,5 +1,4 @@
 # Ignore some key things
-archive/
 composer.lock
 vendor/
 css/application.css
