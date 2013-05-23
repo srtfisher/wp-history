@@ -15,7 +15,7 @@ if (! file_exists('vendor/autoload.php'))
 require 'vendor/autoload.php';
 
 define('WP_HISTORY_BASE', __DIR__);
-require WP_HISTORY_BASE.'/wphistory/Dotorg.php';
+require WP_HISTORY_BASE.'/src/Wphistory/Dotorg.php';
 
 // LESS -> CSS
 $less = new lessc;
@@ -46,6 +46,6 @@ $app->get('/:version', function($version) {
 });
 
 // Include API
-require WP_HISTORY_BASE.'/wphistory/Api.php';
+require WP_HISTORY_BASE.'/src/Wphistory/Api.php';
 
 $app->run();

@@ -1,5 +1,5 @@
 <?php
-namespace wphistory;
+namespace Wphistory;
 
 /**
  * Website: http://sourceforge.net/projects/simplehtmldom/

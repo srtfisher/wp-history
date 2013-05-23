@@ -1,5 +1,5 @@
 <?php
-namespace wphistory;
+namespace Wphistory;
 use \Buzz\Browser;
 
 class Dotorg {
@@ -32,7 +32,7 @@ class Dotorg {
 		if (! $get->isOk())
 			die('error');
 
-		require_once WP_HISTORY_BASE.'/wphistory/HtmlDom.php';
+		require_once WP_HISTORY_BASE.'/src/Wphistory/HtmlDom.php';
 
 		$tbNum = 0;
 		if ($type == 'beta-rc')
