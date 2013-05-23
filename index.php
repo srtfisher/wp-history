@@ -45,4 +45,7 @@ $app->get('/:version', function($version) {
 	echo $j->render(WP_HISTORY_BASE.'/views/v.jade.php');
 });
 
+// Include API
+require WP_HISTORY_BASE.'/wphistory/Api.php';
+
 $app->run();
