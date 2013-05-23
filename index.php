@@ -15,8 +15,18 @@ if (! file_exists('vendor/autoload.php'))
 require 'vendor/autoload.php';
 
 define('WP_HISTORY_BASE', __DIR__);
-require WP_HISTORY_BASE.'/src/Wphistory/Dotorg.php';
 
+// Class Loader
+use Symfony\Component\ClassLoader\UniversalClassLoader;
+
+$loader = new UniversalClassLoader();
+$loader->register();
+
+// Register the namespaces
+$loader->registerNamespace('Wphistory', __DIR__.'/src/Wphistory/');
+
+var_dump(\Wphistory\Dotorg::retrieveCurrentVersion());
+exit;
 // LESS -> CSS
 $less = new lessc;
 $less->checkedCompile(WP_HISTORY_BASE.'/less/application.less', WP_HISTORY_BASE.'/css/application.css');
@@ -30,7 +40,7 @@ $app->get('/', function() {
 });
 
 $app->get('/current', function() use($app) {
-	var_dump(wphistory\Dotorg::retrieveCurrentVersion());
+	var_dump(Wphistory\Dotorg::retrieveCurrentVersion());
 });
 
 // Download a version
